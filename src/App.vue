@@ -2,7 +2,7 @@
   <div id="app">
     <div id="ytl"><img src="./assets/youtube-logo.png" alt="YouTube Logo"></div>
     <h2 id="app-title">Video Browser App</h2>
-    <SearchBar></SearchBar>
+    <SearchBar @termChange="onUserEnter"></SearchBar>
     <VideoDetail></VideoDetail>
     <VideoList></VideoList>
     <VideoListItem></VideoListItem>
@@ -22,6 +22,16 @@ export default {
     VideoDetail,
     VideoList,
     VideoListItem
+  },
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+    onUserEnter(searchTerm) {
+      window.console.log('you searched for:', searchTerm)
+    }
   }
 }
 </script>
@@ -34,7 +44,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0;
-  background-color: #aaa6ac;
+  background-color: #e2dee4;
 }
 #app-title {
   font-size: 1.4em;

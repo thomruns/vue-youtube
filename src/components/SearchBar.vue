@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <input type="text">
+    <input type="text" @keypress.enter="onEnter">
   </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
   data() {
     return {
 
+    }
+  },
+  methods: {
+    onEnter(e) {
+      this.$emit('termChange', e.target.value)
     }
   }
 }
