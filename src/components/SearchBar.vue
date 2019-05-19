@@ -1,7 +1,6 @@
 <template>
   <div class="search">
-    <h1>Search Bar Component</h1>
-    <p>An input field will go here</p>
+    <input type="text">
   </div>
 </template>
 
@@ -10,6 +9,7 @@ export default {
   name: 'SearchBar',
   data() {
     return {
+
     }
   }
 }
@@ -18,10 +18,7 @@ export default {
 <style>
 .search {
   background-color: #ad7add;
-}
-.search h1 {
-  font-size: 1.4em;
-  color: #eee;
+  padding: 10px;
 }
 
 

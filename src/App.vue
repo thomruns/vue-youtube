@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <h1 id="app-title">YouTube Video Browser App</h1>
+    <div id="ytl"><img src="./assets/youtube-logo.png" alt="YouTube Logo"></div>
+    <h2 id="app-title">Video Browser App</h2>
     <SearchBar></SearchBar>
     <VideoDetail></VideoDetail>
     <VideoList></VideoList>
@@ -36,8 +37,10 @@ export default {
   background-color: #aaa6ac;
 }
 #app-title {
-  padding: 20px;
   font-size: 1.4em;
-  text-transform: uppercase;
+}
+#ytl img {
+  display: inline-block;
+  padding: 10px;
 }
 </style>
