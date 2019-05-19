@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 id="app-title">YouTube Video Browser App</h1>
+    <SearchBar></SearchBar>
+    <VideoDetail></VideoDetail>
+    <VideoList></VideoList>
+    <VideoListItem></VideoListItem>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchBar from './components/SearchBar.vue'
+import VideoDetail from './components/VideoDetail.vue'
+import VideoList from './components/VideoList.vue'
+import VideoListItem from './components/VideoListItem.vue'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
+    SearchBar,
+    VideoDetail,
+    VideoList,
+    VideoListItem
   }
 }
 </script>
@@ -23,6 +32,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0;
+  background-color: #aaa6ac;
+}
+#app-title {
+  padding: 20px;
+  font-size: 1.4em;
+  text-transform: uppercase;
 }
 </style>
