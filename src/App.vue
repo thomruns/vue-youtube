@@ -10,6 +10,7 @@
 </template>
 
 <script>
+const API_KEY ="YOUTUBE_API_KEY_HERE"
 import SearchBar from './components/SearchBar.vue'
 import VideoDetail from './components/VideoDetail.vue'
 import VideoList from './components/VideoList.vue'
