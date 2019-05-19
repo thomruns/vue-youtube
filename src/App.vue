@@ -10,7 +10,9 @@
 </template>
 
 <script>
-const API_KEY ="YOUTUBE_API_KEY_HERE"
+const API_KEY ="API_KEY_HERE"
+const YOUTUBE_URL = "https://www.googleapis.com/youtube/v3/search"
+import axios from 'axios'
 import SearchBar from './components/SearchBar.vue'
 import VideoDetail from './components/VideoDetail.vue'
 import VideoList from './components/VideoList.vue'
@@ -31,7 +33,15 @@ export default {
   },
   methods: {
     onUserEnter(searchTerm) {
-      window.console.log('you searched for:', searchTerm)
+      axios.get(YOUTUBE_URL, {
+        params: {
+          key: API_KEY,
+          type: 'video',
+          part: 'snippet',
+          q: searchTerm
+        }
+      }).then(response => window.console.log(response.data))//window used to prevent
+        .catch(err => window.console.log(err))// linting errors
     }
   }
 }
