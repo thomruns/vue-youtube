@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <input type="text" @keypress.enter="onEnter">
+    <input type="text" @keypress.enter="onEnter" placeholder="enter search term">
   </div>
 </template>
 
@@ -24,6 +24,10 @@ export default {
 .search {
   background-color: #ad7add;
   padding: 10px;
+}
+
+.search input {
+  width: 250px;
 }
 
 

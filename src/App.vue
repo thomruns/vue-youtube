@@ -3,8 +3,8 @@
     <div id="ytl"><img src="./assets/youtube-logo.png" alt="YouTube Logo"></div>
     <h2 id="app-title">Video Browser App</h2>
     <SearchBar @termChange="onUserEnter"></SearchBar>
+    <VideoList :videos="videos"></VideoList>
     <VideoDetail></VideoDetail>
-    <VideoList></VideoList>
     <VideoListItem></VideoListItem>
   </div>
 </template>
@@ -14,21 +14,21 @@ const API_KEY ="API_KEY_HERE"
 const YOUTUBE_URL = "https://www.googleapis.com/youtube/v3/search"
 import axios from 'axios'
 import SearchBar from './components/SearchBar.vue'
-import VideoDetail from './components/VideoDetail.vue'
 import VideoList from './components/VideoList.vue'
+import VideoDetail from './components/VideoDetail.vue'
 import VideoListItem from './components/VideoListItem.vue'
 
 export default {
   name: 'App',
   components: {
     SearchBar,
-    VideoDetail,
     VideoList,
+    VideoDetail,
     VideoListItem
   },
   data() {
     return {
-
+      videos: []
     }
   },
   methods: {
@@ -40,7 +40,9 @@ export default {
           part: 'snippet',
           q: searchTerm
         }
-      }).then(response => window.console.log(response.data))//window used to prevent
+      }).then(response => {
+          this.videos = response.data.items
+      })//window used to prevent
         .catch(err => window.console.log(err))// linting errors
     }
   }
