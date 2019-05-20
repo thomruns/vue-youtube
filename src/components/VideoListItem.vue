@@ -1,12 +1,17 @@
 <template>
   <div class="vlist-item">
-    <h1>Video List Item Component</h1>
+    <li>Video List Item (Component)</li>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'VideoListItem'
+  name: 'VideoListItem',
+  data() {
+    return {
+
+    }
+  }
 }
 </script>
 

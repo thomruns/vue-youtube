@@ -5,7 +5,6 @@
     <SearchBar @termChange="onUserEnter"></SearchBar>
     <VideoList :videos="videos"></VideoList>
     <VideoDetail></VideoDetail>
-    <VideoListItem></VideoListItem>
   </div>
 </template>
 

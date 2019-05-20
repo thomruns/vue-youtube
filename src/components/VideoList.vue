@@ -2,14 +2,19 @@
   <div class="video-list">
     <h1>Video List Component</h1>
     <ul>
-      <li v-for="(video, index) in videos" :key="index">{{video.snippet.title}}</li>
+      <VideoListItem v-for="(video, index) in videos" :key="index"></VideoListItem>
     </ul>
   </div>
 </template>
 
 <script>
+import VideoListItem from './VideoListItem'
+
 export default {
   name: 'VideoList',
+  components: {
+    VideoListItem
+  },
   props: {
     videos: Array
   }
