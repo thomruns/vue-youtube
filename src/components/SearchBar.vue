@@ -22,13 +22,14 @@ export default {
 
 <style>
 .search {
-  background-color: #ad7add;
-  padding: 10px;
+  text-align:center;
+  margin: 20px;
 }
 
 .search input {
-  width: 250px;
+  width: 75%;
 }
+
 
 
 </style>

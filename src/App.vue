@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <div id="ytl"><img src="./assets/youtube-logo.png" alt="YouTube Logo"></div>
     <h2 id="app-title">Video Browser App</h2>
     <SearchBar @termChange="onUserEnter"></SearchBar>
