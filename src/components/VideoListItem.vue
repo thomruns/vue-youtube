@@ -1,12 +1,13 @@
 <template>
   <div class="vlist-item">
-    <li>Video List Item (Component)</li>
+    <li>{{ video.snippet.title }}</li>
   </div>
 </template>
 
 <script>
 export default {
   name: 'VideoListItem',
+  props: ['video'],
   data() {
     return {
 

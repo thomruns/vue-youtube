@@ -2,7 +2,10 @@
   <div class="video-list">
     <h1>Video List Component</h1>
     <ul>
-      <VideoListItem v-for="(video, index) in videos" :key="index"></VideoListItem>
+      <VideoListItem v-for="video in videos"
+      :key="video.etag"
+      :video="video"
+      ></VideoListItem>
     </ul>
   </div>
 </template>

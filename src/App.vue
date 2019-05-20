@@ -15,15 +15,13 @@ import axios from 'axios'
 import SearchBar from './components/SearchBar.vue'
 import VideoList from './components/VideoList.vue'
 import VideoDetail from './components/VideoDetail.vue'
-import VideoListItem from './components/VideoListItem.vue'
 
 export default {
   name: 'App',
   components: {
     SearchBar,
     VideoList,
-    VideoDetail,
-    VideoListItem
+    VideoDetail
   },
   data() {
     return {
