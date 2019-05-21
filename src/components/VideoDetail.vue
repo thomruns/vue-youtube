@@ -1,13 +1,16 @@
 <template>
-  <div class="detail">
-    <h1>Video Detail Component</h1>
-
+  <div v-if="video">
+    <div class="details">
+      <h4>{{ video.snippet.title }}</h4>
+      <p>{{ video.snippet.description }}</p>
+    </div> 
   </div>
 </template>
 
 <script>
 export default {
   name: 'VideoDetail',
+  props: ['video'],
   data() {
     return {
     }
@@ -16,12 +19,13 @@ export default {
 </script>
 
 <style>
-.detail {
-  background-color: #86a397;
+.details {
+ background-color: #86a397;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
 }
-.detail h1 {
-  font-size: 1.4em;
-  color: #eee;
-}
+
 
 </style>

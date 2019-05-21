@@ -3,8 +3,8 @@
     <div id="ytl"><img src="./assets/youtube-logo.png" alt="YouTube Logo"></div>
     <h2 id="app-title">Video Browser App</h2>
     <SearchBar @termChange="onUserEnter"></SearchBar>
-    <VideoList :videos="videos"></VideoList>
-    <VideoDetail></VideoDetail>
+    <VideoDetail :video="selectedVideo"></VideoDetail>
+    <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
   </div>
 </template>
 
@@ -25,7 +25,8 @@ export default {
   },
   data() {
     return {
-      videos: []
+      videos: [],
+      selectedVideo: null
     }
   },
   methods: {
@@ -41,6 +42,9 @@ export default {
           this.videos = response.data.items
       })//window used to prevent
         .catch(err => window.console.log(err))// linting errors
+    },
+    onVideoSelect(video) {
+        this.selectedVideo = video
     }
   }
 }
