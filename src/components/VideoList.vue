@@ -1,5 +1,5 @@
 <template>
-  <div class="video-list">
+  <div class="video-list col-md-4">
     <ul class="list-group">
       <VideoListItem v-for="video in videos"
       :key="video.etag"
@@ -32,7 +32,6 @@ export default {
 
 <style>
 .video-list {
-  background-color: #af6596;
   text-align: left;
 }
 .video-list h1 {

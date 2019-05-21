@@ -3,8 +3,10 @@
     <div id="ytl"><img src="./assets/youtube-logo.png" alt="YouTube Logo"></div>
     <h2 id="app-title">Video Browser App</h2>
     <SearchBar @termChange="onUserEnter"></SearchBar>
-    <VideoDetail :video="selectedVideo"></VideoDetail>
-    <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
+    <div class="row">
+      <VideoDetail :video="selectedVideo"></VideoDetail>
+      <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
+    </div>
   </div>
 </template>
 
